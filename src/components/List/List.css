@@ -1,0 +1,15 @@
+.list-activities {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.item-activity {
+  border: 1px solid seagreen;
+  border-radius: 3px;
+  text-align: left;
+  background-color: rgb(160, 190, 160);
+  padding: 1rem;
+}

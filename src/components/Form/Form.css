@@ -1,0 +1,12 @@
+.form-activity {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin: 0 auto;
+  border: 2px solid seagreen;
+  padding: 2em;
+}
+
+.submit-button {
+  display: block;
+}
