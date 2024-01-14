@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Form(onAddActivity) {
+export default function Form({ onAddActivity }) {
   function handleSubmit(event) {
     event.preventDefault();
     const formElements = event.target.elements;
@@ -8,8 +8,8 @@ export default function Form(onAddActivity) {
       name: formElements.inputActivity.value,
       isForGoodWeather: formElements.isForGoodWeather.checked,
     };
-    console.log(data);
-    // onAddActivity(data);
+    console.log("data", data);
+    onAddActivity(data);
     event.target.reset();
     formElements.inputActivity.focus();
   }
@@ -18,8 +18,13 @@ export default function Form(onAddActivity) {
     <>
       <form onSubmit={handleSubmit}>
         <h1>✨Add a new activity✨</h1>
-        <label htmlFor="input-activity">Name of the activity</label>
-        <input name="inputActivity" id="input-activity" type="text"></input>
+        <label htmlFor="input-activity">Name of the activity:</label>
+        <input
+          name="inputActivity"
+          id="input-activity"
+          type="text"
+          required
+        ></input>
         <label htmlFor="input-weather">
           🌞Is it an activity for good weather?🌞
         </label>
